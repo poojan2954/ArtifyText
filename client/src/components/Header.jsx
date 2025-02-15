@@ -71,11 +71,10 @@ const Header = () => {
       <p className='text-center max-w-xl mx-auto mt-5'>Unlock artistic magic with AI—turn words into visuals effortlessly. Type your thoughts and watch AI transform them into captivating visuals.</p>
 
       {/* Generate Button */}
-      <motion.button onClick={onClickHandler} className='sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full cursor-pointer' whileHover={{scale:1.05}} whileTap={{scale:0.95}} initial={{opacity:0}} animate={{opacity:1}} transition={{default: {duaration:0.5},opacity:{delay:0.8,duration:1}}}>
-        Generate Images
-        <img className='h-9' src={assets.star_group} alt=""/>
+        <motion.button onClick={onClickHandler} className='sm:text-lg text-white bg-black w-auto mt-8 px-12 py-2.5 flex items-center gap-2 rounded-full cursor-pointer' whileHover={{scale:1.05}} whileTap={{scale:0.95}} initial={{opacity:0}} animate={{opacity:1}} transition={{default: {duration:0.5}, opacity:{delay:0.8,duration:1}}}>
+          <span className="glow-effect">Generate Images</span>
+          <img className='h-9' src={assets.star_group} alt=""/>
       </motion.button>
-
       {/* Image Gallery */}
       <div className='flex flex-wrap justify-center mt-16 gap-3'>
         {Array(6).fill('').map((item, index) => (

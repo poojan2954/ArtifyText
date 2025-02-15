@@ -20,6 +20,8 @@ const Result = () => {
   const onSubmitHandler = async (e) => {
     e.preventDefault();
     if (!input) return;
+    setImage(null);
+    setIsImageLoaded(false);
     setLoading(true);
     const generatedImage = await generateImage(input);
     if (generatedImage) {
@@ -33,15 +35,16 @@ const Result = () => {
     // pb-72 creates enough space at the bottom for the fixed elements
     <form onSubmit={onSubmitHandler} className="flex flex-col min-h-screen pb-72">
       {/* Header and Image Container */}
-      <div className="flex-1 flex flex-col items-center justify-center pt-4 px-5">
+      <div className="flex-1 flex flex-col items-center justify-center pt-1 px-1 text-center mx-auto">
         {/* Header / Prompt Placeholder */}
-        <div className="text-center text-gray-700 text-lg mb-2">
+        <div className="text-center text-gray-700 text-lg mb-45 sm:mb-33 relative -top-6">
+
           {!image && !loading && <p>Enter a prompt to generate an image...</p>}
           {loading && (
             <>
               <p>Generating image, please wait...</p>
               <motion.div
-                className="h-1 bg-blue-500 mt-2"
+                className="h-1 bg-blue-500 mt-6 text-center text-gray-700 text-lg mb-45 relative -top-6"
                 initial={{ width: 0 }}
                 animate={{ width: '100%' }}
                 transition={{
@@ -56,9 +59,10 @@ const Result = () => {
         </div>
 
         {/* Image Display Section */}
-        <div className="w-full max-w-sm rounded-xl overflow-hidden shadow-lg mb-4">
+        <div className="w-full max-w-sm rounded-xl overflow-hidden shadow-lg text-center text-gray-700 text-lg mb-40 relative -top-80">
           {image && (
-            <motion.img
+            <motion.img    
+              key={image}      
               src={image}
               alt="Generated result"
               className="w-full h-full object-cover"

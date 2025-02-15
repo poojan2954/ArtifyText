@@ -2,6 +2,7 @@ import logo from './logo.svg'
 import logo1 from './logo1.svg'
 import logo2 from './logo2.png'
 import main_logo from './main_logo.png'
+import main_logo_1 from './main_logo_1.png'
 import email_img from './email_img.png'
 import password_img from './password_img.png'
 import user_icon from './user_icon.png'
@@ -36,6 +37,7 @@ export const assets = {
     logo1,
     only_logo,
     main_logo,
+    main_logo_1,
     email_img,
     password_img,
     user_icon,

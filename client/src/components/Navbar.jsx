@@ -9,13 +9,13 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='flex items-center justify-between py-2'> 
+    <div className='flex items-center justify-between py-5 mb-10 relative '> 
       {/* Left Side - Logo */}
       <Link to="/">
         <motion.img
           src={assets.main_logo}
           alt="Logo"
-          className="w-40 sm:w-48 lg:w-56 mix-blend-multiply py-2"
+          className="w-40 sm:w-48 lg:w-56 mix-blend-multiply"
           initial={{ opacity: 0, x: -20 }}  // Start with invisible and slightly to the left
           animate={{ opacity: 1, x: 0 }}     // Animate to visible and centered
           transition={{ duration: 0.5 }}     // Smooth transition for the logo
@@ -23,14 +23,13 @@ const Navbar = () => {
       </Link>
 
       {/* Right Side - User Controls */}
-      <div className='flex items-center gap-5 py-1 absolute top-8 right-25'>
-
+      <div className='flex items-center gap-5 relative -top-13 sm-top-12'>
         {user ? (
           // If user is logged in
           <div className='flex items-center gap-3'>
             <motion.button
               onClick={() => navigate('/buy')}
-              className='flex items-center gap-2 bg-blue-100 px-2 sm:px-6 py-5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700 cursor-pointer'
+              className='flex items-center gap-2 bg-blue-100 px-4 sm:px-6 py-1.5 sm:py-3 rounded-full hover:scale-105 transition-all duration-700 cursor-pointer'
               initial={{ opacity: 0, y: -10 }}  
               animate={{ opacity: 1, y: 0 }}    
               transition={{ delay: 0.3, duration: 0.6 }} 
@@ -52,7 +51,7 @@ const Navbar = () => {
               />
               <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12'>
                 <ul className='list-none m-0 p-2 bg-white rounded-md border text-sm'>
-                  <li onClick={logout} className='py-1 px-1 cursor-pointer pr-10'>Logout</li>
+                  <li onClick={logout} className='py-1 px-2 cursor-pointer pr-10'>Logout</li>
                 </ul>
               </div>
             </div>

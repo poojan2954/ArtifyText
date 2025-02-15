@@ -82,7 +82,7 @@ const BuyCredit = () => {
           >
             {/* Left Side - Logo */}
             <motion.img
-              src={assets.only_logo}
+              src={assets.main_logo_1}
               alt="Logo"
               className="w-12 h-auto sm:w-16 lg:w-20 mr-4"
               initial={{ scale: 0.8 }} // Start with smaller size

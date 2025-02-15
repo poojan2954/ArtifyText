@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
   return (
-    <div className='flex items-center justify-between gap-2 pt-3  pb-0 mt-20 overflow-hidden'>
+    <div className='flex items-center justify-between gap-7 pt-1  pb-0 mt-3 overflow-hidden'>
       {/* Logo with motion */}
       <div className="flex items-center">
         <motion.img 

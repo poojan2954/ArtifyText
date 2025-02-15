@@ -26,7 +26,7 @@ const Generatebtn = () => {
         See the magic🪄. Try Now
       </motion.h1>
 
-      {/* Button with motion */}
+      {/* Button with motion
       <motion.button onClick={onClickHandler}
         className='inline-flex items-center gap-2 px-12 py-3 rounded-full bg-black text-white m-auto hover:scale-105 transition-all duration-500'
         initial={{ opacity: 0, scale: 0.8 }}  // Start with smaller size and invisible
@@ -35,7 +35,7 @@ const Generatebtn = () => {
       >
         Generate Image
         <img src={assets.star_group} alt="" className="h-6" />
-      </motion.button>
+      </motion.button> */}
     </div>
   )
 }
