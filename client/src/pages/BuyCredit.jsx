@@ -52,7 +52,7 @@ const BuyCredit = () => {
   }
 
   return (
-    <div className='min-h-[80vh] text-center pt-14 mb-10'>
+    <div className='min-h-[80vh] text-center pt-14 mb-10 mt-[-120px]'>
       <motion.button
         className='border border-gray-400 cursor-pointer px-10 py-2 rounded-full mb-6'
         whileHover={{ scale: 1.05 }} // Slightly scale up on hover
@@ -62,7 +62,7 @@ const BuyCredit = () => {
       </motion.button>
 
       <motion.h1
-        className='text-center text-3xl font-medium mb-6 sm:mb-10'
+        className='text-center text-3xl font-medium mb-6 sm:mb-10 '
         initial={{ opacity: 0 }} // Start invisible
         animate={{ opacity: 1 }} // Fade in when it comes into view
         transition={{ duration: 0.5 }}
@@ -74,7 +74,7 @@ const BuyCredit = () => {
         {plans.map((item, index) => (
           <motion.div
             key={index}
-            className="flex items-center bg-white drop-shadow-md border rounded-lg p-6 w-80"
+            className="flex items-center bg-white drop-shadow-md border rounded-lg p-6 w-80 "
             whileHover={{ scale: 1.05 }} // Scale the card on hover
             initial={{ opacity: 0, y: 20 }} // Start from below with low opacity
             animate={{ opacity: 1, y: 0 }} // Fade in and move to normal position
@@ -95,7 +95,7 @@ const BuyCredit = () => {
               <p className='font-semibold text-lg'>{item.id}</p>
               <p className='text-sm text-gray-600'>{item.desc}</p>
               <p className='mt-4'>
-                <span className='text-2xl font-medium'>INR {item.price}</span> / {item.credits} credits
+                <span className='text-2xl font-medium'>₹ {item.price}</span> / {item.credits} credits
               </p>
               <motion.button
                 onClick={()=>paymentRazorpay(item.id)}

@@ -1,6 +1,7 @@
 import logo from './logo.svg'
 import logo1 from './logo1.svg'
 import logo2 from './logo2.png'
+import main_logo from './main_logo.png'
 import email_img from './email_img.png'
 import password_img from './password_img.png'
 import user_icon from './user_icon.png'
@@ -19,6 +20,7 @@ import sample_img_5 from './sample_img_5.png'
 import sample_img_6 from './sample_img_6.png'
 import profile_img_1 from './profile_img_1.png'
 import profile_img_2 from './profile_img_2.png'
+import profile_img_3 from './profile_img_3.png'
 import step_icon_1 from './step_icon_1.svg'
 import step_icon_2 from './step_icon_2.svg'
 import step_icon_3 from './step_icon_3.svg'
@@ -33,6 +35,7 @@ export const assets = {
     logo,
     logo1,
     only_logo,
+    main_logo,
     email_img,
     password_img,
     user_icon,
@@ -84,16 +87,16 @@ export const testimonialsData = [
         text:`I've been using ArtifyText for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
     },
     {
-        image:profile_img_2,
-        name:'Richard Nelson',
-        role:'Content Creator',
+        image:profile_img_3,
+        name:' Marie Williams',
+        role:'Art Director & Visual Designer',
         stars:4,
         text:`I've trusted ArtifyText for nearly two years on Instagram, and its simple design has significantly lightened my workload.`
     },
     {
-        image:profile_img_1,
+        image:profile_img_2,
         name:'Daniel Foster',
-        role:'Art Director & Visual Designer',
+        role:'Content Creator',
         stars:5,
         text:`ArtifyText streamlines the creative process by effortlessly transforming ideas into captivating visual content, making it an essential tool for content creators.`
     },

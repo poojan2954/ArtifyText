@@ -21,7 +21,7 @@ const Testimonials = () => {
             <div className="flex flex-col justify-center items-center mb-4">
               <img src={testimonial.image} alt={testimonial.name} className="rounded-full w-14 h-14 mr-4" />
               <div>
-                <h2 className="font-semibold mt-3 text-xl">{testimonial.name}</h2>
+                <h2 className="font-semibold mt-3 text-xl text-center">{testimonial.name}</h2>
                 <p className="text-gray-600 mb-4">{testimonial.role}</p>
               </div>
             </div>

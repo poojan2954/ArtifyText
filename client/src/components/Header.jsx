@@ -15,7 +15,7 @@ const Header = () => {
     }
   }
   return (
-    <motion.div className='flex flex-col justify-center items-center text-center my-8 mx-4 sm:mx-8' initial={{opacity:0.2,y:100}} transition={{duration:1}} whileInView={{opacity:1 , y:0}} viewport={{once:true}}>
+    <motion.div className='flex flex-col justify-center items-center text-center mt-[-110px] mx-4 sm:mx-8' initial={{opacity:0.2,y:100}} transition={{duration:1}} whileInView={{opacity:1 , y:0}} viewport={{once:true}}>
       {/* Text and Star Icon */}
       <motion.div initial={{opacity:0,y:-20}} animate={{opacity:1 , y:0}} transition={{delay:0.2,duration:0.8}}className='text-black inline-flex text-center gap-2 bg-white px-6 py-1 rounded-full border-2 border-black'>
         <p>Best text to image generator</p>
@@ -44,29 +44,28 @@ const Header = () => {
 
 
       {/* Style for Glowing Effect */}
-      <style jsx>
-        {`
-          .glow-effect {
-            text-shadow: 0 0 8px rgb(0, 119, 255),
-                        0 0 16px rgba(121, 23, 219, 0.76),
-                        0 0 24px rgba(0, 119, 255, 0.7);
-            animation: glow-pulse 1.5s infinite alternate ease-in-out;
-          }
+            <style jsx>{`
+        .glow-effect {
+          text-shadow: 0 0 15px rgb(0, 119, 255),
+                      0 0 30px rgba(121, 23, 219, 0.85),
+                      0 0 45px rgba(0, 119, 255, 0.85);
+          animation: glow-pulse 1.5s infinite alternate ease-in-out;
+        }
 
-          @keyframes glow-pulse {
-            0% {
-              text-shadow: 0 0 8px rgba(0, 119, 255, 0.9),
-                          0 0 16px rgba(102, 51, 153, 0.8),
-                          0 0 24px rgba(0, 119, 255, 0.7);
-            }
-            100% {
-              text-shadow: 0 0 16px rgba(0, 119, 255, 0.9),
-                          0 0 32px rgba(102, 51, 153, 0.8),
-                          0 0 40px rgba(0, 119, 255, 0.7);
-            }
-          }   
-        `}
-      </style>
+        @keyframes glow-pulse {
+          0% {
+            text-shadow: 0 0 15px rgba(0, 119, 255, 1),
+                        0 0 30px rgba(102, 51, 153, 0.95),
+                        0 0 45px rgba(0, 119, 255, 0.95);
+          }
+          100% {
+            text-shadow: 0 0 25px rgba(0, 119, 255, 1),
+                        0 0 50px rgba(102, 51, 153, 0.95),
+                        0 0 70px rgba(0, 119, 255, 0.95);
+          }
+        }
+      `}</style>
+
 
       {/* Description Paragraph */}
       <p className='text-center max-w-xl mx-auto mt-5'>Unlock artistic magic with AI—turn words into visuals effortlessly. Type your thoughts and watch AI transform them into captivating visuals.</p>
